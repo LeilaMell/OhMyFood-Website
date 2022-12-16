@@ -1,0 +1,336 @@
+@media (min-width: 1024px) {
+  header {
+    padding: 0;
+  }
+}
+* {
+  font-family: "roboto";
+  margin: 0;
+}
+
+header {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 7% 0 5% 0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 599px) {
+  header {
+    padding: 2% 0;
+  }
+}
+header #logo {
+  width: 160px;
+}
+@media (min-width: 599px) {
+  header #logo {
+    width: 200px;
+  }
+}
+
+.localisation {
+  position: relative;
+  z-index: 1;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+}
+@media (min-width: 599px) {
+  .localisation {
+    padding: 10px;
+  }
+}
+.localisation i {
+  padding-right: 10px;
+}
+@media (min-width: 599px) {
+  .localisation i {
+    font-size: small;
+  }
+}
+.localisation input {
+  border: none;
+  background-color: #EAEAEA;
+  font-size: 17px;
+  width: 120px;
+}
+@media (min-width: 599px) {
+  .localisation input {
+    font-size: small;
+  }
+}
+.localisation input::placeholder {
+  color: black;
+  font-weight: bold;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(245, 245, 245);
+  padding: 5%;
+  text-align: center;
+}
+@media (min-width: 599px) {
+  .reservation {
+    padding: 20px;
+  }
+}
+.reservation h2 {
+  font-size: 20px;
+  padding: 4% 9%;
+  font-weight: bold;
+}
+@media (min-width: 599px) {
+  .reservation h2 {
+    padding: 10px 0 20px 0;
+    font-size: 40px;
+  }
+}
+.reservation p {
+  font-size: 15px;
+}
+@media (min-width: 599px) {
+  .reservation p {
+    font-size: 18px;
+  }
+}
+.reservation button {
+  background-image: linear-gradient(165deg, #FF79DA, #9356DC);
+  color: white;
+  margin: 6%;
+  width: 170px;
+  height: 40px;
+  align-self: center;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 599px) {
+  .reservation button {
+    margin: 20px 0;
+    width: 215px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+.fonctionnement {
+  padding: 50px 5%;
+}
+@media (min-width: 599px) {
+  .fonctionnement {
+    padding: 50px 150px;
+  }
+}
+.fonctionnement h2 {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+@media (min-width: 599px) {
+  .fonctionnement h2 {
+    font-size: 25px;
+  }
+}
+.fonctionnement .etiquettes {
+  margin-left: 2%;
+}
+@media (min-width: 599px) {
+  .fonctionnement .etiquettes {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+}
+.fonctionnement .etiquettes .etiquette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media (min-width: 599px) {
+  .fonctionnement .etiquettes .etiquette {
+    width: 320px;
+    height: 70px;
+  }
+}
+.fonctionnement .etiquettes .etiquette > p {
+  border-radius: 10px;
+  background-color: #9356DC;
+  color: white;
+  font-size: small;
+  padding: 3px 7px;
+  position: absolute;
+  left: -8px;
+}
+.fonctionnement .etiquettes .etiquette .etiquette_body {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  padding: 3%;
+  width: 100%;
+  height: 45px;
+  margin: 4% 0;
+  font-size: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement .etiquettes .etiquette .etiquette_body:hover {
+  background-color: #F5EDFF;
+}
+.fonctionnement .etiquettes .etiquette .etiquette_body i {
+  font-size: 17px;
+  color: #7E7E7E;
+}
+.fonctionnement .etiquettes .etiquette .etiquette_body i:hover {
+  color: #9356DC;
+}
+.fonctionnement .etiquettes .etiquette .etiquette_body p {
+  font-weight: bold;
+}
+@media (min-width: 599px) {
+  .fonctionnement .etiquettes .etiquette .etiquette_body p {
+    font-size: 16px;
+  }
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+}
+@media (min-width: 599px) {
+  .restaurants {
+    padding: 50px 150px;
+  }
+}
+.restaurants h2 {
+  font-size: 20px;
+  padding: 10% 4% 4% 4%;
+}
+@media (min-width: 599px) {
+  .restaurants h2 {
+    padding: 0 0 30px 0;
+  }
+}
+.restaurants .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 599px) {
+  .restaurants .cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.restaurants .card {
+  width: 90%;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 6%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 599px) {
+  .restaurants .card {
+    width: 250px;
+    height: 210px;
+    margin: 0;
+  }
+}
+.restaurants .card img {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
+  border-radius: 20px 20px 0 0;
+}
+@media (min-width: 599px) {
+  .restaurants .card img {
+    height: 140px;
+  }
+}
+.restaurants .card .card_body {
+  display: flex;
+  padding: 5%;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.restaurants .card .card_body #favori {
+  border: none;
+  background-color: white;
+  font-size: large;
+}
+.restaurants .card .card_body #favori #checked {
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: none;
+}
+.restaurants .card .card_body #favori:hover #unchecked {
+  display: none;
+}
+.restaurants .card .card_body #favori:hover #checked {
+  display: inline;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 6% 6% 8% 6%;
+  line-height: 30px;
+}
+@media (min-width: 599px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    padding: 40px;
+    line-height: 15px;
+  }
+}
+footer h2 {
+  font-family: "shrikhand";
+  font-size: large;
+  padding-bottom: 3%;
+}
+@media (min-width: 599px) {
+  footer h2.left_logo {
+    display: none;
+  }
+}
+footer h2.right_logo {
+  display: none;
+}
+@media (min-width: 599px) {
+  footer h2.right_logo {
+    display: inline;
+    padding: 0;
+  }
+}
+footer ul > .list > a {
+  text-decoration: none;
+  color: white;
+}
+footer ul > .list > a i {
+  padding-right: 8px;
+}
+@media (min-width: 599px) {
+  footer ul > .list > a {
+    width: 100%;
+  }
+}
+@media (min-width: 599px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+}
+footer ul .list {
+  width: 200px;
+}
+
+/*# sourceMappingURL=style.css.map */
