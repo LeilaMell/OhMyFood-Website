@@ -1,0 +1,71 @@
+#fond{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+main{
+    @media (min-width: 599px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.menu{
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    border-radius: 30px 30px 0 0;
+    margin-top: -50px;
+    padding: 10px;
+    background-color: $background_color;
+    @media (min-width: 599px) {
+        padding: 40px 100px;
+        align-items: center;
+    }
+    .titre{
+        display: flex;
+        justify-content: space-between;
+        h1{
+            font-family: "shrikhand";
+            font-weight: 100;
+            font-size: 28px;
+            padding: 20px 0 30px 0;
+        }
+    }
+    h2{
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: lighter;
+    }
+
+    hr{
+        width: 40px;
+        border: 2px solid $tertiary_color;
+        margin-top: 5px;
+    }
+
+    .commande{
+        display: flex;
+        justify-content: center;
+    }
+
+    .entree{
+        animation: menu 2s 4300ms backwards;
+    }
+
+    .plats{
+        animation: menu 2s 4600ms backwards;
+    }
+
+    .desserts{
+        animation: menu 2s 4900ms backwards;
+    }
+
+
+}

@@ -1,0 +1,44 @@
+*{
+    font-family: "roboto";
+    margin: 0;
+}
+
+.loading{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    .dot{
+        width: 0px;
+        height:0px;
+        background-color: $primary-color;
+        border-radius: 50px;
+        margin: 10px;  
+    }
+    .dot1{
+        animation: load 1s 4 both alternate;
+    }
+    .dot2{
+        animation: load 1s 200ms 4 both alternate;
+    }
+    .dot3{
+        animation: load 1s 400ms 4 both alternate;
+    }
+}
+      
+      
+
+.page{
+    animation: menu both;
+    animation-delay: 4500ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

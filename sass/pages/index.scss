@@ -1,0 +1,106 @@
+.localisation{
+    position: relative;
+    z-index: 1;
+    background-color: $background_color_2;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    @media (min-width: 599px) {
+        padding: 10px;
+    }
+    i{
+        padding-right: 10px;
+        @media (min-width: 599px) {
+            font-size: small;
+        }
+    }
+    input{
+        border: none;
+        background-color: $background_color_2;
+        font-size: 17px;
+        width: 120px;
+        @media (min-width: 599px) {
+            font-size: small;
+        }
+        &::placeholder{
+            color: black;
+            font-weight:bold;
+        }
+    }
+}
+
+.reservation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    padding: 5%;
+    text-align: center;
+    @media (min-width: 599px) {
+        padding: 20px;
+    }
+    h2{
+        font-size: 20px;
+        padding: 4% 9%;
+        font-weight: bold;
+        @media (min-width: 599px) {
+            padding: 10px 0 20px 0;
+            font-size: 40px;
+        }
+    }
+    p{
+        font-size: 15px;
+        @media (min-width: 599px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.fonctionnement{
+    padding: 50px 5%;
+    @media (min-width: 599px) {
+        padding: 50px 5%;
+    }
+    h2{
+        font-size: 20px;
+        padding-bottom: 20px;
+        @media (min-width: 599px) {
+            font-size: 25px;
+        }
+    }
+    .etiquettes{
+        margin-left:2%;
+        flex-wrap: wrap;
+        @media (min-width: 599px) {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+        }
+    }   
+}
+
+.restaurants{
+    background-color: $background_color;
+    @media (min-width: 599px) {
+        padding: 50px 5%;
+    }
+    h2{
+        font-size: 20px;
+        padding: 10% 4% 4% 4%;
+        @media (min-width: 599px) {
+            padding: 0 0 30px 0;
+        }
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        @media (min-width: 599px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+}
+
