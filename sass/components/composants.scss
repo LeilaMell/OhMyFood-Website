@@ -129,7 +129,33 @@
         justify-content: space-between;
         font-size: 15px;
         #favori{
-            @include favori(white);
+            background-color: $background-color;
+            border: none;
+            font-size: large;
+            position: relative;
+            #unchecked{
+                position: absolute;
+                right: 5px;
+                bottom: 15px;
+                animation: heartbtn 300ms alternate;
+            }
+            #checked{
+                position: absolute;
+                right: 5px;
+                bottom: 15px;
+                background: linear-gradient(to bottom, $primary-color 0%, $secondary-color 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: heartbtnout 300ms forwards;
+            }
+            &:hover{
+                #unchecked{
+                    display: none;
+                }
+                #checked{
+                    animation: heartbtn 300ms alternate;
+                }    
+            }
         }
     }
     .new{
@@ -146,7 +172,31 @@
 }
 
 #favori1{
-    @include favori($background-color);
+    background-color: white;
+    border: none;
+    font-size: large;
+    position: relative;
+    #unchecked{
+        position: absolute;
+        bottom: 40px;
+        animation: heartbtn 300ms alternate;
+    }
+    #checked{
+        position: absolute;
+        bottom: 40px;
+        background: linear-gradient(to bottom, $primary-color 0%, $secondary-color 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: heartbtnout 300ms forwards;
+    }
+    &:hover{
+        #unchecked{
+            display: none;
+        }
+        #checked{
+            animation: heartbtn 300ms alternate;
+        }    
+    }
 }
 
 .card-menu{

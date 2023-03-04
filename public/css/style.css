@@ -244,7 +244,7 @@
   font-size: 15px;
 }
 .card .card_body #favori {
-  background-color: white;
+  background-color: #F6F6F6;
   border: none;
   font-size: large;
   position: relative;
@@ -283,21 +283,19 @@
 }
 
 #favori1 {
-  background-color: #F6F6F6;
+  background-color: white;
   border: none;
   font-size: large;
   position: relative;
 }
 #favori1 #unchecked {
   position: absolute;
-  right: 5px;
-  bottom: 15px;
+  bottom: 40px;
   animation: heartbtn 300ms alternate;
 }
 #favori1 #checked {
   position: absolute;
-  right: 5px;
-  bottom: 15px;
+  bottom: 40px;
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
