@@ -1,15 +1,3 @@
-/*@keyframes loading { 
-    0% {
-        width: 0;
-    }
-    50% {
-        width: 200px;
-        height: 200px;
-    }
-    100% {
-        width: 0;
-    }
-}*/
 @keyframes load {
   0% {
     width: 0px;
@@ -33,6 +21,14 @@
     transform: scale(1);
   }
 }
+@keyframes heartbtnout {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 @keyframes menu {
   0% {
     opacity: 0;
@@ -47,6 +43,14 @@
   }
   100% {
     width: 60px;
+  }
+}
+@keyframes slideout {
+  0% {
+    width: 60px;
+  }
+  100% {
+    width: 0px;
   }
 }
 * {
@@ -90,10 +94,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.loading {
-  animation: loading 3s backwards;
 }
 
 .reservation > button, .commander {
@@ -247,19 +247,28 @@
   background-color: white;
   border: none;
   font-size: large;
+  position: relative;
+}
+.card .card_body #favori #unchecked {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+  animation: heartbtn 300ms alternate;
 }
 .card .card_body #favori #checked {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: none;
+  animation: heartbtnout 300ms forwards;
 }
 .card .card_body #favori:hover #unchecked {
   display: none;
 }
 .card .card_body #favori:hover #checked {
-  display: inline-block;
-  animation: heartbtn 300ms;
+  animation: heartbtn 300ms alternate;
 }
 .card .new {
   position: absolute;
@@ -277,19 +286,28 @@
   background-color: #F6F6F6;
   border: none;
   font-size: large;
+  position: relative;
+}
+#favori1 #unchecked {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+  animation: heartbtn 300ms alternate;
 }
 #favori1 #checked {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: none;
+  animation: heartbtnout 300ms forwards;
 }
 #favori1:hover #unchecked {
   display: none;
 }
 #favori1:hover #checked {
-  display: inline-block;
-  animation: heartbtn 300ms;
+  animation: heartbtn 300ms alternate;
 }
 
 .card-menu {
@@ -326,6 +344,9 @@
 }
 .card-menu .card-dish:hover + .coche {
   animation: slide 1s forwards;
+}
+.card-menu .card-dish + .coche {
+  animation: slideout 1s forwards;
 }
 .card-menu .coche {
   margin: 0;

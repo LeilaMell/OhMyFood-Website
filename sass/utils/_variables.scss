@@ -8,35 +8,31 @@ $background_color_2:#EAEAEA;
     background-color: $background-color;
     border: none;
     font-size: large;
+    position: relative;
+    #unchecked{
+        position: absolute;
+        right: 5px;
+        bottom: 15px;
+        animation: heartbtn 300ms alternate;
+    }
     #checked{
+        position: absolute;
+        right: 5px;
+        bottom: 15px;
         background: linear-gradient(to bottom, $primary-color 0%, $secondary-color 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        display: none;
+        animation: heartbtnout 300ms forwards;
     }
     &:hover{
         #unchecked{
             display: none;
         }
         #checked{
-            display: inline-block;
-            animation: heartbtn 300ms;
-        }     
+            animation: heartbtn 300ms alternate;
+        }    
     }
 }
-
-/*@keyframes loading { 
-    0% {
-        width: 0;
-    }
-    50% {
-        width: 200px;
-        height: 200px;
-    }
-    100% {
-        width: 0;
-    }
-}*/
 
 @keyframes load {
     0%{
@@ -63,6 +59,15 @@ $background_color_2:#EAEAEA;
     }
 }
 
+@keyframes heartbtnout {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
 @keyframes menu {
     0% {
         opacity: 0;
@@ -81,4 +86,11 @@ $background_color_2:#EAEAEA;
     }
 }
 
-
+@keyframes slideout {
+    0%{
+        width: 60px;
+    }
+    100%{
+        width: 0px;
+    }
+}
