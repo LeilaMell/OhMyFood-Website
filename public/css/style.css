@@ -244,31 +244,32 @@
   font-size: 15px;
 }
 .card .card_body #favori {
-  background-color: #F6F6F6;
+  background-color: white;
   border: none;
   font-size: large;
   position: relative;
 }
 .card .card_body #favori #unchecked {
+  border: 1px solid red;
   position: absolute;
   right: 5px;
   bottom: 15px;
-  animation: heartbtn 300ms alternate;
+}
+.card .card_body #favori #unchecked:hover {
+  display: none;
+}
+.card .card_body #favori #unchecked:hover #checked {
+  font-size: large;
+  animation: heartbtn 300ms forwards;
 }
 .card .card_body #favori #checked {
+  font-size: 0px;
   position: absolute;
   right: 5px;
   bottom: 15px;
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: heartbtnout 300ms forwards;
-}
-.card .card_body #favori:hover #unchecked {
-  display: none;
-}
-.card .card_body #favori:hover #checked {
-  animation: heartbtn 300ms alternate;
 }
 .card .new {
   position: absolute;
@@ -283,7 +284,7 @@
 }
 
 #favori1 {
-  background-color: white;
+  background-color: #F6F6F6;
   border: none;
   font-size: large;
   position: relative;
@@ -632,13 +633,13 @@ footer ul .list {
   justify-content: center;
 }
 .menu .entree {
-  animation: menu 2s 4300ms backwards;
+  animation: menu 2s backwards;
 }
 .menu .plats {
-  animation: menu 2s 4600ms backwards;
+  animation: menu 2s 400ms backwards;
 }
 .menu .desserts {
-  animation: menu 2s 4900ms backwards;
+  animation: menu 2s 800ms backwards;
 }
 
 /*# sourceMappingURL=style.css.map */

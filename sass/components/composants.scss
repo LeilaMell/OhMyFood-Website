@@ -129,33 +129,32 @@
         justify-content: space-between;
         font-size: 15px;
         #favori{
-            background-color: $background-color;
+            background-color: white;
             border: none;
             font-size: large;
             position: relative;
             #unchecked{
+                border: 1px solid red;
                 position: absolute;
                 right: 5px;
                 bottom: 15px;
-                animation: heartbtn 300ms alternate;
+                &:hover{
+                    display: none;
+                }
+                &:hover #checked{
+                    font-size: large;
+                    animation: heartbtn 300ms forwards;
+                }
             }
             #checked{
+                font-size: 0px;
                 position: absolute;
                 right: 5px;
                 bottom: 15px;
                 background: linear-gradient(to bottom, $primary-color 0%, $secondary-color 100%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                animation: heartbtnout 300ms forwards;
-            }
-            &:hover{
-                #unchecked{
-                    display: none;
-                }
-                #checked{
-                    animation: heartbtn 300ms alternate;
-                }    
-            }
+            }  
         }
     }
     .new{
@@ -172,7 +171,7 @@
 }
 
 #favori1{
-    background-color: white;
+    background-color: $background-color;
     border: none;
     font-size: large;
     position: relative;
