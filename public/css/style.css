@@ -13,22 +13,6 @@
     background-color: #FF79DA;
   }
 }
-@keyframes heartbtn {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes heartbtnout {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
 @keyframes menu {
   0% {
     opacity: 0;
@@ -243,34 +227,6 @@
   justify-content: space-between;
   font-size: 15px;
 }
-.card .card_body #favori {
-  background-color: white;
-  border: none;
-  font-size: large;
-  position: relative;
-}
-.card .card_body #favori #unchecked {
-  border: 1px solid red;
-  position: absolute;
-  right: 5px;
-  bottom: 15px;
-}
-.card .card_body #favori #unchecked:hover {
-  display: none;
-}
-.card .card_body #favori #unchecked:hover #checked {
-  font-size: large;
-  animation: heartbtn 300ms forwards;
-}
-.card .card_body #favori #checked {
-  font-size: 0px;
-  position: absolute;
-  right: 5px;
-  bottom: 15px;
-  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .card .new {
   position: absolute;
   right: 10px;
@@ -281,32 +237,6 @@
   padding: 6px;
   font-weight: 500;
   border-radius: 2px;
-}
-
-#favori1 {
-  background-color: #F6F6F6;
-  border: none;
-  font-size: large;
-  position: relative;
-}
-#favori1 #unchecked {
-  position: absolute;
-  bottom: 40px;
-  animation: heartbtn 300ms alternate;
-}
-#favori1 #checked {
-  position: absolute;
-  bottom: 40px;
-  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: heartbtnout 300ms forwards;
-}
-#favori1:hover #unchecked {
-  display: none;
-}
-#favori1:hover #checked {
-  animation: heartbtn 300ms alternate;
 }
 
 .card-menu {
@@ -359,6 +289,84 @@
 }
 .card-menu .coche i {
   overflow: hidden;
+}
+
+.container_hearts {
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+  cursor: pointer;
+}
+
+.container_hearts:hover > .heart-bg {
+  opacity: 1;
+  font-size: large;
+}
+
+.container_hearts:hover > .heart-nobg {
+  opacity: 0;
+}
+
+.hearts {
+  transform: translate(-60%, -60%);
+  position: absolute;
+}
+
+.heart-nobg {
+  transition: all 0.5s ease-in;
+  opacity: 1;
+  font-size: large;
+}
+
+.heart-bg {
+  display: initial;
+  transition: all 0.5s ease-in;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  font-size: 0.05em;
+}
+
+.titre {
+  position: relative;
+  width: 265px;
+}
+.titre .container_hearts_restaurant {
+  position: absolute;
+  top: 48%;
+  right: -1em;
+  cursor: pointer;
+}
+@media (min-width: 599px) {
+  .titre .container_hearts_restaurant {
+    right: -2em;
+  }
+}
+.titre .container_hearts_restaurant:hover > .heart-bg {
+  opacity: 1;
+  font-size: large;
+}
+.titre .container_hearts_restaurant:hover > .heart-nobg {
+  opacity: 0;
+}
+.titre .hearts {
+  transform: translate(-60%, -60%);
+  position: absolute;
+}
+.titre .heart-nobg {
+  transition: all 0.5s ease-in;
+  opacity: 1;
+  font-size: large;
+}
+.titre .heart-bg {
+  display: initial;
+  transition: all 0.5s ease-in;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  font-size: 0.05em;
 }
 
 header {
